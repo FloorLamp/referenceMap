@@ -1,5 +1,5 @@
 {
-  "name": "referenceMap",
+  "name": "reference-map",
   "version": "0.0.0",
   "description": "This is a simple determinstic map that maps POJOs to an integer",
   "main": "index.js",
