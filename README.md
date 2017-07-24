@@ -1,4 +1,4 @@
-[![NPM Package](https://img.shields.io/npm/v/referanceMap.svg?style=flat-square)](https://www.npmjs.org/package/referanceMap)
+[![NPM Package](https://img.shields.io/npm/v/reference-map.svg?style=flat-square)](https://www.npmjs.org/package/reference-map)
 [![Build Status](https://img.shields.io/travis/wanderer/referanceMap.svg?branch=master&style=flat-square)](https://travis-ci.org/wanderer/referanceMap)
 [![Coverage Status](https://img.shields.io/coveralls/wanderer/referanceMap.svg?style=flat-square)](https://coveralls.io/wanderer/referanceMap)
 
