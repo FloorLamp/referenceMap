@@ -1,11 +1,11 @@
-[![NPM Package](https://img.shields.io/npm/v/primea-wasm-container.svg?style=flat-square)](https://www.npmjs.org/package/primea-wasm-container)
-[![Build Status](https://img.shields.io/travis/primea/js-primea-wasm-container.svg?branch=master&style=flat-square)](https://travis-ci.org/primea/js-primea-wasm-container)
-[![Coverage Status](https://img.shields.io/coveralls/primea/js-primea-wasm-container.svg?style=flat-square)](https://coveralls.io/primea/js-primea-wasm-container)
+[![NPM Package](https://img.shields.io/npm/v/referanceMap.svg?style=flat-square)](https://www.npmjs.org/package/referanceMap)
+[![Build Status](https://img.shields.io/travis/wanderer/referanceMap.svg?branch=master&style=flat-square)](https://travis-ci.org/wanderer/referanceMap)
+[![Coverage Status](https://img.shields.io/coveralls/wanderer/referanceMap.svg?style=flat-square)](https://coveralls.io/wanderer/referanceMap)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)  
 
 # install
-`npm install primea-wasm-container`
+`npm install referanceMap`
 
 # SYNOPSIS 
 This is a simple determinstic map that maps POJOs to an integer.
