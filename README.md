@@ -1,6 +1,6 @@
 [![NPM Package](https://img.shields.io/npm/v/reference-map.svg?style=flat-square)](https://www.npmjs.org/package/reference-map)
-[![Build Status](https://img.shields.io/travis/wanderer/referanceMap.svg?branch=master&style=flat-square)](https://travis-ci.org/wanderer/referanceMap)
-[![Coverage Status](https://img.shields.io/coveralls/wanderer/referanceMap.svg?style=flat-square)](https://coveralls.io/wanderer/referanceMap)
+[![Build Status](https://img.shields.io/travis/wanderer/referenceMap.svg?branch=master&style=flat-square)](https://travis-ci.org/wanderer/referenceMap)
+[![Coverage Status](https://img.shields.io/coveralls/wanderer/referenceMap.svg?style=flat-square)](https://coveralls.io/wanderer/referenceMap)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)  
 
