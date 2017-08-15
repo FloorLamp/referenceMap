@@ -44,4 +44,12 @@ module.exports = class ReferanceMap {
   clear () {
     this._map = []
   }
+
+  /**
+   * returns the number of items in the refernace map
+   * @return {integer}
+   */
+  get size () {
+    return this._map.length
+  }
 }

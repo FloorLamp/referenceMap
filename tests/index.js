@@ -2,7 +2,7 @@ const tape = require('tape')
 const ReferanceMap = require('../index.js')
 
 tape('referance mapping', t => {
-  t.plan(6)
+  t.plan(7)
   const referanceMap = new ReferanceMap()
   const obj1 = {}
   const obj2 = {}
@@ -16,6 +16,8 @@ tape('referance mapping', t => {
 
   t.equals(foundObj1, obj1, 'should get the correct object')
   t.equals(foundObj2, obj2, 'should get the correct object')
+
+  t.equals(referanceMap.size, 2, 'should return the correct size')
 
   referanceMap.delete(ref1)
   try {
