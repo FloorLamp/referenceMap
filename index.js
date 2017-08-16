@@ -23,7 +23,7 @@ module.exports = class ReferanceMap {
    */
   get (ref) {
     const obj = this._map[ref]
-    if (!obj) {
+    if (obj === undefined) {
       throw new Error('invalid referance')
     }
     return obj
@@ -51,5 +51,14 @@ module.exports = class ReferanceMap {
    */
   get size () {
     return this._map.length
+  }
+
+  /**
+   * tests wether a given referance is valid or not
+   * @return {boolean}
+   */
+  has (ref) {
+    const obj = this._map[ref]
+    return obj !== undefined
   }
 }
