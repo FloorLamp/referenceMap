@@ -4,9 +4,7 @@
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)  
 
-# install
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/wanderer/referenceMap.svg)](https://greenkeeper.io/)
+# install  
 `npm install referanceMap`
 
 # SYNOPSIS 
