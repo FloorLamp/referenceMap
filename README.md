@@ -14,13 +14,13 @@ This is a simple determinstic map that maps POJOs to an integer.
 
 ## constructor
 
-[index.js:5-7](https://github.com/wanderer/referanceMap/blob/e1f2c200e1e82a761064a31fb0aebf800a54e6ea/index.js#L5-L7 "Source code on GitHub")
+[index.js:5-7](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L5-L7 "Source code on GitHub")
 
 Handle mapping arbitary JS object to ints
 
 ## add
 
-[index.js:15-17](https://github.com/wanderer/referanceMap/blob/e1f2c200e1e82a761064a31fb0aebf800a54e6ea/index.js#L15-L17 "Source code on GitHub")
+[index.js:15-17](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L15-L17 "Source code on GitHub")
 
 Adds an object to the referance map returning an int to be used as a
 referance
@@ -28,43 +28,45 @@ referance
 **Parameters**
 
 -   `obj` **any** 
+-   `type`  
 
 Returns **integer** 
 
 ## get
 
-[index.js:24-30](https://github.com/wanderer/referanceMap/blob/e1f2c200e1e82a761064a31fb0aebf800a54e6ea/index.js#L24-L30 "Source code on GitHub")
+[index.js:25-31](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L25-L31 "Source code on GitHub")
 
 gets a POJO given a refernce as an int
 
 **Parameters**
 
 -   `ref` **integer** 
+-   `type` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** optional, a contructor that the retreived object should be an instance of
 
 Returns **any** 
 
 ## delete
 
-[index.js:37-39](https://github.com/wanderer/referanceMap/blob/e1f2c200e1e82a761064a31fb0aebf800a54e6ea/index.js#L37-L39 "Source code on GitHub")
+[index.js:38-40](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L38-L40 "Source code on GitHub")
 
 deletes an object given a referance as an int
 
 **Parameters**
 
--   `integer`  
 -   `ref`  
+-   `integer`  
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** whether or not the object was deleted
 
 ## clear
 
-[index.js:44-46](https://github.com/wanderer/referanceMap/blob/e1f2c200e1e82a761064a31fb0aebf800a54e6ea/index.js#L44-L46 "Source code on GitHub")
+[index.js:45-47](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L45-L47 "Source code on GitHub")
 
 clears the referance map of a objects
 
 ## size
 
-[index.js:52-54](https://github.com/wanderer/referanceMap/blob/e1f2c200e1e82a761064a31fb0aebf800a54e6ea/index.js#L52-L54 "Source code on GitHub")
+[index.js:53-55](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L53-L55 "Source code on GitHub")
 
 returns the number of items in the refernace map
 
@@ -72,7 +74,7 @@ Returns **integer**
 
 ## has
 
-[index.js:60-63](https://github.com/wanderer/referanceMap/blob/e1f2c200e1e82a761064a31fb0aebf800a54e6ea/index.js#L60-L63 "Source code on GitHub")
+[index.js:61-64](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L61-L64 "Source code on GitHub")
 
 tests wether a given referance is valid or not
 
@@ -83,4 +85,6 @@ tests wether a given referance is valid or not
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 # LICENSE
-[MPL-2.0](https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2))
+[MPL-2.0][LICENSE]
+
+[LICENSE]: https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2)
