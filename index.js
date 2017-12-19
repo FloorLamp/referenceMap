@@ -12,18 +12,19 @@ module.exports = class ReferanceMap {
    * @param {*} obj
    * @return {integer}
    */
-  add (obj) {
+  add (obj, type) {
     return this._map.push(obj) - 1
   }
 
   /**
    * gets a POJO given a refernce as an int
    * @param {integer} ref
+   * @param {Object} type - optional, a contructor that the retreived object should be an instance of
    * @return {*}
    */
-  get (ref) {
+  get (ref, type) {
     const obj = this._map[ref]
-    if (obj === undefined) {
+    if (obj === undefined || (type && type !== obj.constructor)) {
       throw new Error('invalid referance')
     }
     return obj

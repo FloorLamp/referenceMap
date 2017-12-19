@@ -2,7 +2,7 @@ const tape = require('tape')
 const ReferanceMap = require('../index.js')
 
 tape('referance mapping', t => {
-  t.plan(9)
+  t.plan(11)
   const referanceMap = new ReferanceMap()
   const obj1 = {}
   const obj2 = {}
@@ -35,5 +35,14 @@ tape('referance mapping', t => {
     referanceMap.get(ref2)
   } catch (e) {
     t.true(true, 'should clear refances')
+  }
+
+  const aMap = new Map()
+  const ref3 = referanceMap.add(aMap)
+  t.equals(referanceMap.get(ref3, Map), aMap)
+  try {
+    referanceMap.get(ref3, Set)
+  } catch (e) {
+    t.true(true, 'should throw if wrong type')
   }
 })
