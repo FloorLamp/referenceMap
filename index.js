@@ -13,7 +13,7 @@ module.exports = class ReferanceMap {
    * @return {integer}
    */
   add (obj, type) {
-    return this._map.push(obj) - 1
+    return this._map.push({obj, type}) - 1
   }
 
   /**
@@ -22,9 +22,9 @@ module.exports = class ReferanceMap {
    * @param {Object} type - optional, a contructor that the retreived object should be an instance of
    * @return {*}
    */
-  get (ref, type) {
-    const obj = this._map[ref]
-    if (obj === undefined || (type && type !== obj.constructor)) {
+  get (ref, typeCheck) {
+    const {obj, type} = this._map[ref]
+    if (obj === undefined || (typeCheck && type !== typeCheck)) {
       throw new Error('invalid referance')
     }
     return obj

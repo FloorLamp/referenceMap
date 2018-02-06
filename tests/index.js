@@ -38,10 +38,10 @@ tape('referance mapping', t => {
   }
 
   const aMap = new Map()
-  const ref3 = referanceMap.add(aMap)
-  t.equals(referanceMap.get(ref3, Map), aMap)
+  const ref3 = referanceMap.add(aMap, 'set')
+  t.equals(referanceMap.get(ref3, 'set'), aMap)
   try {
-    referanceMap.get(ref3, Set)
+    referanceMap.get(ref3, 'lol')
   } catch (e) {
     t.true(true, 'should throw if wrong type')
   }
