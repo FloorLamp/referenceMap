@@ -10,6 +10,7 @@ module.exports = class ReferanceMap {
    * Adds an object to the referance map returning an int to be used as a
    * referance
    * @param {*} obj
+   * @param {*} type - optional
    * @return {integer}
    */
   add (obj, type) {
@@ -19,7 +20,7 @@ module.exports = class ReferanceMap {
   /**
    * gets a POJO given a refernce as an int
    * @param {integer} ref
-   * @param {Object} type - optional, a contructor that the retreived object should be an instance of
+   * @param {Object} type - optional
    * @return {*}
    */
   get (ref, typeCheck) {

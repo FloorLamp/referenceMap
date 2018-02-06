@@ -14,13 +14,13 @@ This is a simple determinstic map that maps POJOs to an integer.
 
 ## constructor
 
-[index.js:5-7](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L5-L7 "Source code on GitHub")
+[index.js:5-7](https://github.com/wanderer/referanceMap/blob/be536d78f588a72a29acd71fb3ab0fa35b0789eb/index.js#L5-L7 "Source code on GitHub")
 
 Handle mapping arbitary JS object to ints
 
 ## add
 
-[index.js:15-17](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L15-L17 "Source code on GitHub")
+[index.js:16-18](https://github.com/wanderer/referanceMap/blob/be536d78f588a72a29acd71fb3ab0fa35b0789eb/index.js#L16-L18 "Source code on GitHub")
 
 Adds an object to the referance map returning an int to be used as a
 referance
@@ -28,26 +28,27 @@ referance
 **Parameters**
 
 -   `obj` **any** 
--   `type`  
+-   `type` **any** optional
 
 Returns **integer** 
 
 ## get
 
-[index.js:25-31](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L25-L31 "Source code on GitHub")
+[index.js:26-32](https://github.com/wanderer/referanceMap/blob/be536d78f588a72a29acd71fb3ab0fa35b0789eb/index.js#L26-L32 "Source code on GitHub")
 
 gets a POJO given a refernce as an int
 
 **Parameters**
 
 -   `ref` **integer** 
--   `type` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** optional, a contructor that the retreived object should be an instance of
+-   `typeCheck`  
+-   `type` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** optional
 
 Returns **any** 
 
 ## delete
 
-[index.js:38-40](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L38-L40 "Source code on GitHub")
+[index.js:39-41](https://github.com/wanderer/referanceMap/blob/be536d78f588a72a29acd71fb3ab0fa35b0789eb/index.js#L39-L41 "Source code on GitHub")
 
 deletes an object given a referance as an int
 
@@ -60,13 +61,13 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ## clear
 
-[index.js:45-47](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L45-L47 "Source code on GitHub")
+[index.js:46-48](https://github.com/wanderer/referanceMap/blob/be536d78f588a72a29acd71fb3ab0fa35b0789eb/index.js#L46-L48 "Source code on GitHub")
 
 clears the referance map of a objects
 
 ## size
 
-[index.js:53-55](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L53-L55 "Source code on GitHub")
+[index.js:54-56](https://github.com/wanderer/referanceMap/blob/be536d78f588a72a29acd71fb3ab0fa35b0789eb/index.js#L54-L56 "Source code on GitHub")
 
 returns the number of items in the refernace map
 
@@ -74,7 +75,7 @@ Returns **integer**
 
 ## has
 
-[index.js:61-64](https://github.com/wanderer/referanceMap/blob/4feba821797fde6cd27d47673c1d1cdb90120baf/index.js#L61-L64 "Source code on GitHub")
+[index.js:62-65](https://github.com/wanderer/referanceMap/blob/be536d78f588a72a29acd71fb3ab0fa35b0789eb/index.js#L62-L65 "Source code on GitHub")
 
 tests wether a given referance is valid or not
 
