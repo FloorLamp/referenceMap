@@ -3,6 +3,7 @@ module.exports = class ReferanceMap {
    * Handle mapping arbitary JS object to ints
    */
   constructor () {
+    this.intRefProp = Symbol('int')
     this._map = []
   }
 
@@ -14,7 +15,12 @@ module.exports = class ReferanceMap {
    * @return {integer}
    */
   add (obj, type) {
-    return this._map.push({obj, type}) - 1
+    let ref = obj[this.intRefProp]
+    if (ref === undefined) {
+      ref = this._map.push({obj, type}) - 1
+      obj[this.intRefProp] = ref
+    }
+    return ref
   }
 
   /**
