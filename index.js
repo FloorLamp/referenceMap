@@ -43,6 +43,7 @@ module.exports = class ReferanceMap {
    * @return {boolean} whether or not the object was deleted
    */
   delete (ref) {
+    delete this._map[ref][this.intRefProp]
     delete this._map[ref]
   }
 
@@ -50,6 +51,7 @@ module.exports = class ReferanceMap {
    * clears the referance map of a objects
    */
   clear () {
+    this.intRefProp = Symbol('int')
     this._map = []
   }
 
