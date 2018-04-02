@@ -51,7 +51,9 @@ module.exports = class ReferanceMap {
    * clears the referance map of a objects
    */
   clear () {
-    this.intRefProp = Symbol('int')
+    this._map.forEach(el => {
+      delete el[this.intRefProp]
+    })
     this._map = []
   }
 
