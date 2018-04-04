@@ -50,3 +50,13 @@ tape('referance mapping', t => {
     t.true(true, 'should throw if wrong type')
   }
 })
+
+tape('failures', t => {
+  const referanceMap = new ReferanceMap()
+  const buf = Buffer.from('hello')
+  referanceMap.add(buf)
+  referanceMap.clear()
+  const ref = referanceMap.add(buf)
+  t.deepEquals(referanceMap.get(ref), buf)
+  t.end()
+})

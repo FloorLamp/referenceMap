@@ -43,7 +43,7 @@ module.exports = class ReferanceMap {
    * @return {boolean} whether or not the object was deleted
    */
   delete (ref) {
-    delete this._map[ref][this.intRefProp]
+    delete this._map[ref].obj[this.intRefProp]
     delete this._map[ref]
   }
 
@@ -52,7 +52,7 @@ module.exports = class ReferanceMap {
    */
   clear () {
     this._map.forEach(el => {
-      delete el[this.intRefProp]
+      delete el.obj[this.intRefProp]
     })
     this._map = []
   }
