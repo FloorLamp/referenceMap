@@ -1,6 +1,6 @@
 module.exports = class ReferanceMap {
   /**
-   * Handle mapping arbitary JS object to ints
+   * Handle mapping arbitrary JS object to ints
    */
   constructor () {
     this.intRefProp = Symbol('int')
@@ -8,8 +8,8 @@ module.exports = class ReferanceMap {
   }
 
   /**
-   * Adds an object to the referance map returning an int to be used as a
-   * referance
+   * Adds an object to the reference map returning an int to be used as a
+   * reference
    * @param {*} obj
    * @param {*} type - optional
    * @return {integer}
@@ -24,21 +24,23 @@ module.exports = class ReferanceMap {
   }
 
   /**
-   * gets a POJO given a refernce as an int
+   * gets a POJO given a reference as an int
    * @param {integer} ref
    * @param {Object} type - optional
    * @return {*}
    */
   get (ref, typeCheck) {
-    const {obj, type} = this._map[ref]
-    if (obj === undefined || (typeCheck && type !== typeCheck)) {
-      throw new Error('invalid referance')
+    const result = this._map[ref]
+    if (result === undefined) {
+      throw new Error(`invalid reference "${ref}". Object doesn't exist`)
+    } else if (typeCheck && result.type !== typeCheck) {
+      throw new Error(`invalid reference "${ref}". Expected type: "${typeCheck}" actual type: "${result.type}"`)
     }
-    return obj
+    return result.obj
   }
 
   /**
-   * deletes an object given a referance as an int
+   * deletes an object given a reference as an int
    * @param {integer}
    * @return {boolean} whether or not the object was deleted
    */
@@ -48,7 +50,7 @@ module.exports = class ReferanceMap {
   }
 
   /**
-   * clears the referance map of a objects
+   * clears the reference map of a objects
    */
   clear () {
     this._map.forEach(el => {
@@ -58,7 +60,7 @@ module.exports = class ReferanceMap {
   }
 
   /**
-   * returns the number of items in the refernace map
+   * returns the number of items in the reference map
    * @return {integer}
    */
   get size () {
@@ -66,7 +68,7 @@ module.exports = class ReferanceMap {
   }
 
   /**
-   * tests wether a given referance is valid or not
+   * tests whether a given reference is valid or not
    * @return {boolean}
    */
   has (ref) {

@@ -51,7 +51,29 @@ tape('referance mapping', t => {
   }
 })
 
+tape('get failures', t => {
+  t.plan(2)
+  const referenceMap = new ReferanceMap()
+  const obj1 = {}
+  const obj2 = {}
+  const ref1 = referenceMap.add(obj1, 'correctType')
+  const ref2 = referenceMap.add(obj2, 'someType')
+  try {
+    referenceMap.get(ref1, 'wrongType')
+  } catch (e) {
+    t.equal(e.toString(), `Error: invalid reference "${ref1}". Expected type: "wrongType" actual type: "correctType"`)
+  }
+  referenceMap.delete(ref2)
+  try {
+    referenceMap.get(ref2)
+  } catch (e) {
+    t.equal(e.toString(), `Error: invalid reference "${ref2}". Object doesn't exist`)
+  }
+  t.end()
+})
+
 tape('failures', t => {
+  t.plan(1)
   const referanceMap = new ReferanceMap()
   const buf = Buffer.from('hello')
   referanceMap.add(buf)
