@@ -72,7 +72,6 @@ module.exports = class ReferanceMap {
    * @return {boolean}
    */
   has (ref) {
-    const obj = this._map[ref]
-    return obj !== undefined
+    return this._map[ref] !== undefined
   }
 }
