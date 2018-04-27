@@ -15,6 +15,10 @@ module.exports = class ReferanceMap {
    * @return {integer}
    */
   add (obj, type) {
+    if (!(obj !== null && typeof obj === 'object')) {
+      throw new Error(`invalid object "${obj}"`)
+    }
+
     let ref = obj[this.intRefProp]
     if (ref === undefined) {
       ref = this._map.push({obj, type}) - 1

@@ -73,12 +73,18 @@ tape('get failures', t => {
 })
 
 tape('failures', t => {
-  t.plan(1)
+  t.plan(2)
   const referanceMap = new ReferanceMap()
   const buf = Buffer.from('hello')
   referanceMap.add(buf)
   referanceMap.clear()
   const ref = referanceMap.add(buf)
   t.deepEquals(referanceMap.get(ref), buf)
+
+  try {
+    referanceMap.add(1)
+  } catch (e) {
+    t.equal(e.toString(), 'Error: invalid object "1"')
+  }
   t.end()
 })
